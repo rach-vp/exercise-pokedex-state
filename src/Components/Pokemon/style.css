@@ -1,0 +1,127 @@
+.pokemon {
+  align-items: flex-start;
+  background-color: #fffff0;
+  border: 2px solid #ffaaaa;
+  border-radius: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
+  width: 100px;
+}
+
+.pokemon__name {
+  align-self: center;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin: 0.5em 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.pokemon:hover .pokemon__name {
+  transform: translateZ(100px);
+}
+
+.pokemon__type {
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px grey;
+  transition: 0.3s;
+}
+
+.pokemon:hover .pokemon__type {
+  transform: translateZ(100px);
+}
+
+.pokemon__type[data-type='Electric'] {
+  background-color: #ffcc00;
+}
+
+.pokemon__type[data-type='Fire'] {
+  background-color: #fd7d24;
+}
+
+.pokemon__type[data-type='Bug'] {
+  background-color: #729f3f;
+}
+
+.pokemon__type[data-type='Poison'] {
+  background-color: #b97fc9;
+}
+
+.pokemon__type[data-type='Psychic'] {
+  background-color: #f366b9;
+}
+
+.pokemon__type[data-type='Normal'] {
+  background-color: #a4acaf;
+}
+
+.pokemon__type[data-type='Dragon'] {
+  background-image: linear-gradient(to bottom, #53a4cf, #f16e57);
+}
+
+.pokemon__type[data-type='Dark'] {
+  background-color: #707070;
+}
+
+.pokemon__type[data-type='Fairy'] {
+  background-color: #fdb9e9;
+}
+
+.pokemon__type[data-type='Fight'] {
+  background-color: #d56723;
+}
+
+.pokemon__type[data-type='Fliying'] {
+  background-image: linear-gradient(to bottom, #3dc7ef, #bdb9b8);
+}
+
+.pokemon__type[data-type='Ghost'] {
+  background-color: #7b62a3;
+}
+
+.pokemon__type[data-type='Plant'] {
+  background-color: #9bcc50;
+}
+
+.pokemon__type[data-type='Ground'] {
+  background-image: linear-gradient(to bottom, #f8df40, #ab9842);
+}
+
+.pokemon__type[data-type='Ice'] {
+  background-color: #51c4e7;
+}
+
+.pokemon__type[data-type='Rock'] {
+  background-color: #a48d22;
+}
+
+.pokemon__type[data-type='Steel'] {
+  background-color: #9eb7b8;
+}
+
+.pokemon__type[data-type='Water'] {
+  background-color: #4592c4;
+}
+
+.pokemon__weight {
+  margin-bottom: 10px;
+  transform: translateZ(1px)
+}
+
+.pokemon__image {
+  transition: 0.3s;
+  width: 100%;
+}
+
+.pokemon:hover .pokemon__image {
+  transform: translateZ(100px);
+}
