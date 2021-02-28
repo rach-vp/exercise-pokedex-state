@@ -5,7 +5,7 @@ import PokedexPromise from 'pokedex-promise-v2';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.pokedex = new PokedexPromise();
     this.state = {
       loading: false,
