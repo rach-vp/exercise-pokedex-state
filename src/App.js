@@ -38,10 +38,15 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const pokemons = await this.pokedex
+    const pokemonsCompact = await this.pokedex
       .getPokemonsList()
       .then(res => res.results)
-      .catch(err => err);
+      .catch(err => console.log(err));
+    const pokemonsNamesList = pokemonsCompact.map(({ name }) => name);
+    const pokemons = await this.pokedex
+      .getPokemonByName(pokemonsNamesList)
+      .then(res => res)
+      .catch(err => console.log(err));
     this.setState({ pokemons, length: pokemons.length, loading: false });
   }
 
