@@ -3,38 +3,20 @@ import PropTypes from 'prop-types';
 import Pokemon from '../Pokemon';
 import './style.css';
 export default class Pokedex extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      loading: true,
-      pokemons: null,
-    }
-  }
-
-  async componentDidMount() {
-    const url = 'https://pokeapi.co/api/v2/generation/1/';
-    const pokemons = await fetch(url)
-      .then(res => res.json())
-      .then(res => res.pokemon_species)
-      .catch(err => console.log(err));
-    this.setState({ pokemons, loading: false });
-  }
-
-
   render() {
+    const { pokemons } = this.props;
+
     return (
       <main>
-        {
-          this.state.loading
-            ? <div>Loading...</div>
-            : this.state.pokemons.map(({ name }) =>
-              <Pokemon
-                key={name}
-                pokemon={name}
-              />
-            )
-        }
+        {pokemons.map(({ name, type, averageWeight, image }) =>
+          <Pokemon
+            key={name}
+            name={name}
+            type={type}
+            averageWeight={averageWeight}
+            image={image}
+          />
+        )}
       </main>
     );
   }
