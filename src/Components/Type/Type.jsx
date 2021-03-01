@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { arrayOf, shape, string } from 'prop-types';
 import './style.css';
 
 export default class Type extends Component {
@@ -15,5 +16,21 @@ export default class Type extends Component {
         }
       </div>
     )
+  }
+}
+
+Type.propTypes = {
+  types: arrayOf(shape({
+    types: shape({
+      name: string,
+    })
+  }))
+};
+
+Type.defaultProps = {
+  types: {
+    type: {
+      name: 'Pokemon type',
+    }
   }
 }

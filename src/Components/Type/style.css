@@ -48,7 +48,7 @@
   background-color: #fdb9e9;
 }
 
-.pokemon__type[data-type='fight'] {
+.pokemon__type[data-type='fighting'] {
   background-color: #d56723;
   color: #fff;
 }

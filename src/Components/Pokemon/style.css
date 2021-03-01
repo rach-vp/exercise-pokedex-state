@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   margin: 1em;
-  padding: 1em;
+  padding: 0.5em;
   transform: perspective(1000px);
   transform-style: preserve-3d;
   width: 100px;
@@ -33,11 +33,7 @@
   transition: 0.3s;
 }
 
-.pokemon__image {
-  transition: 0.3s;
-  width: 100%;
-}
-
-.pokemon:hover .pokemon__image {
+.pokemon:hover .pokemon__sprites-wrapper {
   transform: translateZ(100px);
+  transition: 0.3s;
 }

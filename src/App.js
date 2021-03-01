@@ -63,9 +63,9 @@ class App extends Component {
       ? <div>LOADING...</div>
       : (
           <main>
-            <FaArrowAltCircleLeft className="left-arrow" onClick={ this.prevCard }/>
-            <FaArrowAltCircleRight className="right-arrow" onClick={ this.nextCard } />
+            <FaArrowAltCircleLeft style= {{ cursor: 'pointer' }} className="left-arrow" onClick={ this.prevCard }/>
             <Pokedex pokemons={ this.getFilteredList() } />
+            <FaArrowAltCircleRight style= {{ cursor: 'pointer' }} className="right-arrow" onClick={ this.nextCard } />
           </main>
         )
     );
